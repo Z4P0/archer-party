@@ -1,0 +1,50 @@
+.how-will-you-get-there {
+    background-image: url(../images/stars-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    .title {
+        color: $red;
+        text-align: center;
+        font-size: rem-calc(29);
+        @include mq(netbook) {
+            font-size: rem-calc(58);
+        }
+    }
+}
+
+.choose-your-ride {
+    text-align: center;
+    .title {
+        font-size: rem-calc(24);
+        color: $red;
+        @include mq(netbook) {
+            font-size: rem-calc(38);
+        }
+    }
+}
+    .choose-your-ride-list {
+        margin-top: $column-gutter*2;
+        margin-bottom: $column-gutter*2;
+    }
+
+        .ride {
+            margin: 0;
+            figcaption {
+                margin-top: $column-gutter*0.875;
+                margin-bottom: $column-gutter*0.75;
+            }
+        }
+        .ride-actions {
+            a {
+                display: inline-block;
+                background-color: $red;
+                color: $white;
+                font-size: rem-calc(14);
+                padding: rem-calc(4) rem-calc(16);
+                border-radius: rem-calc(16);
+                + a {
+                    margin-left: rem-calc(12);
+                }
+            }
+        }

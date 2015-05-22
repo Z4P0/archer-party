@@ -36,40 +36,42 @@ html(lang="en").no-js
               a(href="#choose-your-ride").btn Next
 
         //- choose your ride
-        #choose-your-ride.page-section
-          .row
-            .columns
-              h2 How will you get there?
-              ul.small-block-grid-1.medium-block-grid-3
-                li
-                  div
-                    figure.ride
-                      img(src="images/freedom.jpg", alt="alt")
-                    ul.small-block-grid-2
-                      li
+        #choose-your-ride
+          .how-will-you-get-there
+            .row.page-section
+              .columns
+                h2.title How will you get there?
+          .choose-your-ride
+            .row.page-section
+              .columns
+                h3.title Choose Your Ride
+                ul.choose-your-ride-list.small-block-grid-1.medium-block-grid-3
+                  li
+                    div
+                      figure.ride
+                        img(src="images/mary-poppins.png", alt="Umbrella")
+                        figcaption Mary Poppin's Umbrella
+                      .ride-actions
                         a(href="#") More Info
-                      li
                         a(href="#") This is my ride
-                li
-                  div
-                    figure.ride
-                      img(src="images/freedom.jpg", alt="alt")
-                    ul.small-block-grid-2
-                      li
+                  li
+                    div
+                      figure.ride
+                        img(src="images/millenium-falcon.png", alt="alt")
+                        figcaption The Millenium Falcon
+                      .ride-actions
                         a(href="#") More Info
-                      li
                         a(href="#") This is my ride
-                li
-                  div
-                    figure.ride
-                      img(src="images/freedom.jpg", alt="alt")
-                    ul.small-block-grid-2
-                      li
+                  li
+                    div
+                      figure.ride
+                        img(src="images/elevator.png", alt="alt")
+                        figcaption An Elevator
+                      .ride-actions
                         a(href="#") More Info
-                      li
                         a(href="#") This is my ride
 
-        #confirmation.page-section
+        #confirmation.confirmation.page-section
           .row
             .columns
               h2#thank-you-message See you there!
