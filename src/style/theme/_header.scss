@@ -80,18 +80,8 @@
         }
     }
 
-    .rsvp-button {
-        display: inline-block;
-        color: $white;
-        border-radius: rem-calc(32);
-        background-color: transparent;
-        padding: $column-gutter*0.125 $column-gutter*0.5;
-        font-size: rem-calc(20);
-        border: 1px solid $white;
+    .rsvp-btn {
         margin-bottom: $column-gutter;
-        &:hover {
-            color: $white;
-        }
         img {
             margin-left: rem-calc(8);
         }

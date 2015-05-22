@@ -10,9 +10,14 @@
 @import "theme/base";
 // @import "theme/typography";
 @import "theme/header";
+@import "theme/rsvp-section";
 
 
 .page-section {
     padding-top: $column-gutter*2;
     padding-bottom: $column-gutter*2;
+}
+
+.copyright {
+    text-align: center;
 }

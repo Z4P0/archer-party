@@ -10,6 +10,7 @@ html(lang="en").no-js
   body#index
     a(href="#main").visuallyhidden Skip to main content
     .container
+      //- sky is not the limit
       header.header.page-section
         .row
           .columns
@@ -19,24 +20,27 @@ html(lang="en").no-js
             h1.h1
               span Celebrate with
               img(src="images/archer-logo.png", alt="", title="Archer Communications", width="206", height="54")
-            a(href="#rsvp-form").rsvp-button RSVP <img src="images/arrow-down.png" alt=""/>
+            a(href="#rsvp-form").rsvp-btn.btn RSVP <img src="images/arrow-down.png" alt=""/>
 
       main#main
-        #rsvp-form.page-section
+        //- rsvp form - red
+        #rsvp-form.rsvp-form-div.page-section
           .row
             .columns
-              h2 Join us as we celebrate reaching new heights!
+              h2.title Join us as we celebrate reaching new heights!
               p Please Enter:
               .rsvp-form
                 input(type="text", placeholder="Full Name", name="full_name")
                 input(type="text", placeholder="Company")
                 input(type="email", placeholder="E-Mail")
-                a(href="#choose-your-ride") Next
+              a(href="#choose-your-ride").btn Next
+
+        //- choose your ride
         #choose-your-ride.page-section
           .row
             .columns
               h2 How will you get there?
-              ul.small-block-grid-1.medium-block-grid-1
+              ul.small-block-grid-1.medium-block-grid-3
                 li
                   div
                     figure.ride
@@ -74,6 +78,6 @@ html(lang="en").no-js
       footer.footer
         .row
           .columns
-            p 2015 &copy; Archer Communications
+            p.copyright 2015 &copy; Archer Communications
 
     include _scripts.jade
