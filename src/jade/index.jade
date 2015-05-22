@@ -10,18 +10,70 @@ html(lang="en").no-js
   body#index
     a(href="#main").visuallyhidden Skip to main content
     .container
-      header.header
+      header.header.page-section
         .row
           .columns
-            h1 m o n t e
+            p.jumbo-text The sky is not the limit
+            p.date June 17th, 2015
+            p.time 5:00 pm - 8:00pm
+            h1.h1
+              span Celebrate with
+              img(src="images/archer-logo.png", alt="", title="Archer Communications", width="206", height="54")
+            a(href="#rsvp-form").rsvp-button RSVP <img src="images/arrow-down.png" alt=""/>
+
       main#main
-        .row
-          .columns
-            p spanish for mountain
+        #rsvp-form.page-section
+          .row
+            .columns
+              h2 Join us as we celebrate reaching new heights!
+              p Please Enter:
+              .rsvp-form
+                input(type="text", placeholder="Full Name", name="full_name")
+                input(type="text", placeholder="Company")
+                input(type="email", placeholder="E-Mail")
+                a(href="#choose-your-ride") Next
+        #choose-your-ride.page-section
+          .row
+            .columns
+              h2 How will you get there?
+              ul.small-block-grid-1.medium-block-grid-1
+                li
+                  div
+                    figure.ride
+                      img(src="images/freedom.jpg", alt="alt")
+                    ul.small-block-grid-2
+                      li
+                        a(href="#") More Info
+                      li
+                        a(href="#") This is my ride
+                li
+                  div
+                    figure.ride
+                      img(src="images/freedom.jpg", alt="alt")
+                    ul.small-block-grid-2
+                      li
+                        a(href="#") More Info
+                      li
+                        a(href="#") This is my ride
+                li
+                  div
+                    figure.ride
+                      img(src="images/freedom.jpg", alt="alt")
+                    ul.small-block-grid-2
+                      li
+                        a(href="#") More Info
+                      li
+                        a(href="#") This is my ride
+
+        #confirmation.page-section
+          .row
+            .columns
+              h2#thank-you-message See you there!
+
 
       footer.footer
         .row
           .columns
-            p &phi;
+            p 2015 &copy; Archer Communications
 
     include _scripts.jade

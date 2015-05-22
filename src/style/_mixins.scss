@@ -12,6 +12,9 @@
 
     @else if $breakpoint == desktop
     {@media only screen and (min-width: 1024px) {@content; } }
+
+    @else if $breakpoint == xl
+    {@media only screen and (min-width: 1200px) {@content; } }
 }
 
 @mixin if_there_are($n) {
