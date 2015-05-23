@@ -39,17 +39,3 @@
             margin-bottom: $column-gutter*1.5;
         }
     }
-
-
-    .btn {
-        display: inline-block;
-        color: $white;
-        background-color: transparent;
-        font-size: rem-calc(24);
-        padding: rem-calc(5) rem-calc(40) rem-calc(10);
-        border: 1px solid $white;
-        border-radius: rem-calc(32);
-        &:hover {
-            color: inherit;
-        }
-    }

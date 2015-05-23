@@ -8,12 +8,12 @@
 @import "vendor/foundation";
 // custom
 @import "theme/base";
-// @import "theme/typography";
 @import "theme/header";
 @import "theme/rsvp-section";
 @import "theme/choose-your-ride";
+@import "theme/confirmation-footer";
 
-
+// general classes
 .page-section {
     padding-top: $column-gutter*2;
     padding-bottom: $column-gutter*2;
@@ -22,13 +22,25 @@
 .copyright {
     text-align: center;
     margin-bottom: 0;
+    font-size: rem-calc(12);
+    background-color: $red;
+    color: $white;
 }
 
 .title {
     font-weight: $light;
 }
 
-.confirmation {
-    background-color: #684d5c;
+.btn {
+    display: inline-block;
+    color: $white;
+    background-color: transparent;
+    font-size: rem-calc(24);
+    padding: rem-calc(5) rem-calc(40) rem-calc(10);
+    border: 1px solid $white;
+    border-radius: rem-calc(32);
+    &:hover,
+    &:focus {
+        color: inherit;
+    }
 }
-

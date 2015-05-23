@@ -74,12 +74,22 @@ html(lang="en").no-js
         #confirmation.confirmation.page-section
           .row
             .columns
-              h2#thank-you-message See you there!
+              .row
+                .columns.medium-8
+                  .thank-you-message
+                    h2#thank-you-text.thank-you-text That's no moon Luis, it's...
+                    p.the-strathallan The Strathallan
+                  .confirmation-extras.row
+                    .columns.medium-5
+                      p.see-you-there See you there!
+                      a(href="#").btn.get-directions-btn Get directions
+                    .columns.medium-7
+                      p.date-time-reminder June 17th, 2015 <br/>5:00pm - 8:00pm
+                      a(href="#").add-to-calendar Add to calendar
+                        img(src="images/calendar-icon.png", alt="").left
 
 
       footer.footer
-        .row
-          .columns
-            p.copyright 2015 &copy; Archer Communications
+        p.copyright 2015 &copy; Archer Communications
 
     include _scripts.jade
