@@ -31,6 +31,48 @@
             // konami /* play sound effect */
             var easter_egg = new Konami(this.utils.konami);
 
+
+            // 0. details
+            var $window = $(window);
+            console.log($window.height());
+            $.each([$('.header'), $('#confirmation')], function (i, ele) {
+                $(ele).css('min-height', $window.height());
+            });
+
+
+            // the custom shite
+            // 1.
+            // people have to click "RSVP" in order to see the page
+            var $main = $('#main');
+            // hide the page. they have to click RSVP to see the rest
+            $main.css('position', 'fixed');
+
+            $('#rsvp-btn').on('click', function () {
+                $main.removeAttr('style');
+            });
+
+            // greensock ftw
+            // ----------------------------------------
+            var timeline = new TimelineMax,
+                // mySplitText = new SplitText("#intro-text", {type:"words,chars"}),
+                mySplitText = new SplitText("#intro-text"),
+                chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+            TweenMax.set("#intro-text", {perspective:400});
+
+            timeline.staggerFrom(chars, 0.8, {
+                opacity:0,
+                scale:0,
+                y:80,
+                rotationX:180,
+                transformOrigin:"0% 50% -50",
+                ease:Back.easeOut
+            }, 0.1, "+=0");
+
+            $('#intro-text').on('click', function () {
+                timeline.restart();
+            });
+
         },
 
 
