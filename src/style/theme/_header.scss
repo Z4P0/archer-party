@@ -3,7 +3,12 @@
     text-align: center;
     background-color: $black;
     color: $white;
+    > .row {
+        position: relative;
+        z-index: 1;
+    }
 }
+
     .jumbo-text {
         font-weight: $light;
         font-size: rem-calc(50);
@@ -95,3 +100,12 @@
             margin-bottom: $column-gutter*3;
         }
     }
+
+
+.space-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

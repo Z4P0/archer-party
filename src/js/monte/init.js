@@ -32,6 +32,68 @@
             var easter_egg = new Konami(this.utils.konami);
 
 
+            var render_canvas = true;
+            // var render_canvas = false;
+            function animate(){
+
+                // render the stage
+                renderer.render(stage);
+
+                requestAnimationFrame(animate);
+            }
+
+            if (render_canvas) {
+
+                var renderer = PIXI.autoDetectRenderer(800, 600, {
+                    transparent: true,
+                    view: document.querySelector('#space-canvas')
+                });
+
+                // document.body.appendChild(renderer.view);
+
+                // create the root of the scene graph
+                var stage = new PIXI.Container();
+
+                // // create a video texture from a path
+                // var texture = PIXI.Texture.fromVideo('misc/space-loop.mp4');
+                // on mobile show an image / prevent massive file download
+                // on tablet < show video
+                var texture;
+                if (Foundation.utils.is_small_only()) {
+                    texture = PIXI.Texture.fromImage('images/freedom.jpg');
+                } else {
+                    texture = PIXI.Texture.fromVideo('misc/space-loop.mp4');
+                }
+
+                // create a new Sprite using the video texture (yes it's that easy)
+                var videoSprite = new PIXI.Sprite(texture);
+
+                videoSprite.width = renderer.width;
+                videoSprite.height = renderer.height;
+
+                stage.addChild(videoSprite);
+
+                animate();
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // 0. details
             var $window = $(window);
             console.log($window.height());
@@ -49,28 +111,6 @@
 
             $('#rsvp-btn').on('click', function () {
                 $main.removeAttr('style');
-            });
-
-            // greensock ftw
-            // ----------------------------------------
-            var timeline = new TimelineMax,
-                // mySplitText = new SplitText("#intro-text", {type:"words,chars"}),
-                mySplitText = new SplitText("#intro-text"),
-                chars = mySplitText.chars; //an array of all the divs that wrap each character
-
-            TweenMax.set("#intro-text", {perspective:400});
-
-            timeline.staggerFrom(chars, 0.8, {
-                opacity:0,
-                scale:0,
-                y:80,
-                rotationX:180,
-                transformOrigin:"0% 50% -50",
-                ease:Back.easeOut
-            }, 0.1, "+=0");
-
-            $('#intro-text').on('click', function () {
-                timeline.restart();
             });
 
         },
