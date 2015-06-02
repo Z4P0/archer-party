@@ -13,6 +13,35 @@
         modules: {},
 
 
+        center_content: function (query_string) {
+            var $ele = $(query_string);
+            var difference = ($(window).height() - $ele.height()) / 2;
+            $ele.css({
+                'padding-top': difference+'px',
+                'padding-bottom': difference+'px'
+            });
+
+        },
+
+        choose_ride: function (reveal_modal_id, data_reveal_id, anchor_tag) {
+
+            monte.settings.ride = $(anchor_tag).data('ride');
+            $(reveal_modal_id).foundation('reveal', 'close');
+
+            // change classes
+            var $old_choice = $('.ride-choice');
+            if ($old_choice.length) {
+                $old_choice.removeClass('ride-choice');
+            }
+            $(data_reveal_id).parent().addClass('ride-choice')
+
+            console.log(
+                monte.settings
+            );
+
+            monte.confirmation_page();
+        },
+
 
         init: function() {
 
@@ -30,6 +59,96 @@
 
             // konami /* play sound effect */
             var easter_egg = new Konami(this.utils.konami);
+
+
+            // do some animation setup
+            this.animate.init();
+
+
+            /*
+                intro rsvp-form, choose your ride, confirmation
+            */
+            this.intro_page();
+
+
+            // setup event listeners for chooing a ride
+            $('#choose-mary-poppins').on('click', function () {
+                monte.choose_ride('#mary-poppins-modal', '[data-reveal-id="mary-poppins-modal"]', '#choose-mary-poppins');
+            });
+            $('#choose-millenium-falcon').on('click', function () {
+                monte.choose_ride('#millenium-falcon-modal', '[data-reveal-id="millenium-falcon-modal"]', '#choose-millenium-falcon');
+            });
+            $('#choose-elevator').on('click', function () {
+                monte.choose_ride('#elevator-modal', '[data-reveal-id="elevator-modal"]', '#choose-elevator');
+            });
+
+        },
+
+
+
+        // 1 - the intro
+        intro_page: function () {
+
+            monte.animate.intro_screen();
+
+            // the custom shite
+            // 1.
+            // people have to click "RSVP" in order to see the page
+            var $main = $('#main');
+            // hide the page. they have to click RSVP to see the rest
+            $main.css('position', 'fixed');
+
+            $('#rsvp-btn').on('click', function () {
+                $main.removeAttr('style');
+                monte.rsvp_form();
+            });
+
+        },
+
+
+        // 2 - the rsvp form
+        rsvp_form: function () {
+
+            this.center_content('#rsvp-form');
+
+            $('#name').on('change', function () {
+                monte.settings.name = $(this).val().split(' ')[0];
+            });
+
+            $('#company').on('change', function () {
+                monte.settings.company = $(this).val();
+            });
+
+            $('#email').on('change', function () {
+                monte.settings.email = $(this).val();
+            });
+
+
+            $('#choose-your-ride-btn').on('click', function () {
+                // if (monte.settings.name === '' || monte.settings.name === 'undefined' || monte.settings.name === undefined) {
+                //     alert('Please add your name');
+                // } else {
+                    monte.choose_your_ride();
+                // }
+            });
+        },
+
+
+        choose_your_ride: function () {
+
+            TweenMax.to('#choose-your-ride', 0.2, {
+                height: $('.how-will-you-get-there').height() + $('.choose-your-ride').height()
+            });
+
+        },
+
+
+
+        confirmation_page: function () {
+
+            TweenMax.to('#confirmation', 0.2, {
+                height: $(window).height()
+            });
 
 
             // var render_canvas = true;
@@ -77,44 +196,6 @@
 
             }
 
-
-
-            // center the video
-            // $('#space-video').();
-
-            monte.animate.intro_screen();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // 0. details
-            var $window = $(window);
-            console.log($window.height());
-            // $.each([$('.header'), $('#confirmation')], function (i, ele) {
-            //     $(ele).css('min-height', $window.height());
-            // });
-
-
-            // the custom shite
-            // 1.
-            // people have to click "RSVP" in order to see the page
-            var $main = $('#main');
-            // hide the page. they have to click RSVP to see the rest
-            $main.css('position', 'fixed');
-
-            $('#rsvp-btn').on('click', function () {
-                $main.removeAttr('style');
-            });
 
         },
 

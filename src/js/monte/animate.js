@@ -7,6 +7,19 @@
 
     monte.animate = {
 
+        init: function () {
+
+            TweenMax.to('#choose-your-ride', 0.2, {
+                height: 0
+            });
+
+
+            this.confirmation_tween = TweenMax.to('#confirmation', 0.2, {
+                height: 0
+            });
+
+        },
+
         intro_screen: function () {
 
             // greensock ftw
@@ -25,7 +38,7 @@
             timeline
                 .from('#space-video', 3, {
                     opacity: 0,
-                    delay: 0.5
+                    delay: 0.25
                 })
                 .staggerFrom(chars, 0.8, {
                     opacity:0,

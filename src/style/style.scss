@@ -48,10 +48,6 @@ body {
 }
 
 .footer {
-    // position: absolute;
-    // z-index: 3;
-    // bottom: 0;
-    // width: 100%;
     background-color: $red;
 }
 
@@ -62,3 +58,18 @@ body {
         color: $white;
     }
 
+
+//  ----------------------------------------
+.screen {
+    // display: none;
+    height: 0;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+}
+.choose-your-ride-div,
+.confirmation {
+    overflow: hidden;
+}
