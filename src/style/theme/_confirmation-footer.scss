@@ -5,14 +5,15 @@
     background-position: bottom center;
     background-size: contain;
     color: $white;
+    position: relative;
 }
 
     // the big thank you
     .thank-you-message {
-        margin-bottom: $column-gutter;
-        @include mq(netbook) {
-            margin-bottom: $column-gutter*2;
-        }
+        // margin-bottom: $column-gutter;
+        // @include mq(netbook) {
+        //     margin-bottom: $column-gutter*2;
+        // }
     }
         %thank-you-text {
             font-weight: $light;

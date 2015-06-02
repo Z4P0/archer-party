@@ -98,6 +98,12 @@
 
 
 
+            // $('#add-to-calendar').on('click', function (event) {
+            //     event.preventDefault();
+            //     console.log($('#google-calendar-link').find('.subscribe-image'));
+            //     $('#google-calendar-link').find('.subscribe-image').click();
+            // });
+
 
             /*
                 READY?
