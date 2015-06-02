@@ -32,8 +32,8 @@
             var easter_egg = new Konami(this.utils.konami);
 
 
-            var render_canvas = true;
-            // var render_canvas = false;
+            // var render_canvas = true;
+            var render_canvas = false;
             function animate(){
 
                 // render the stage
@@ -79,7 +79,10 @@
 
 
 
+            // center the video
+            // $('#space-video').();
 
+            monte.animate.intro_screen();
 
 
 
@@ -97,9 +100,9 @@
             // 0. details
             var $window = $(window);
             console.log($window.height());
-            $.each([$('.header'), $('#confirmation')], function (i, ele) {
-                $(ele).css('min-height', $window.height());
-            });
+            // $.each([$('.header'), $('#confirmation')], function (i, ele) {
+            //     $(ele).css('min-height', $window.height());
+            // });
 
 
             // the custom shite

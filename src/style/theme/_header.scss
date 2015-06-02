@@ -1,7 +1,7 @@
 // header
 .header {
     text-align: center;
-    background-color: $black;
+    // background-color: $black;
     color: $white;
     > .row {
         position: relative;
@@ -103,9 +103,17 @@
 
 
 .space-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    // credit:
+    // http://demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-Background-Video
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    // z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
 }

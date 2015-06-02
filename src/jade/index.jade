@@ -9,22 +9,21 @@ html(lang="en").no-js
 
   body#index
     a(href="#main").visuallyhidden Skip to main content
+    video#space-video.space-video(autoplay, loop)
+      source(src="misc/space-loop.mp4", type="video/mp4")
     .container
       //- sky is not the limit
       header.header.page-section
         .row
           .columns
             p.jumbo-text#intro-text The sky is not the limit
-            p.date June 17th, 2015
-            p.time 5:00 pm - 8:00pm
-            h1.h1
-              span Celebrate with
-              img(src="images/archer-logo.png", alt="", title="Archer Communications", width="206", height="54")
-            a#rsvp-btn(href="#rsvp-form").rsvp-btn.btn RSVP <img src="images/arrow-down.png" alt=""/>
-        canvas#space-canvas.space-video
-        //- video(autoplay, poster="images/table2.png", loop)
-        //- video#space-video.space-video(autoplay, loop)
-          source(src="misc/space-loop.mp4", type="video/mp4")
+            div#details
+              p.date.intro-text June 17th, 2015
+              p.time.intro-text 5:00 pm - 8:00pm
+              h1.h1.intro-text
+                span Celebrate with
+                img(src="images/archer-logo.png", alt="", title="Archer Communications", width="206", height="54")
+              a#rsvp-btn.intro-text(href="#rsvp-form").rsvp-btn.btn RSVP
 
 
       main#main

@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         js_libs_dir: 'js/vendor/',
         js_files: [
             'js/monte/init.js',
+            'js/monte/animate.js',
         ],
         output: {
             folder:                 '../build/',
