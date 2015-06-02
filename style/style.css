@@ -10114,10 +10114,14 @@ p {
 .header {
   color: #fafafa; 
   text-align: center;
-  background-color: #2f2f2f;
+}
+/* line 6, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+.header > .row {
+  position: relative;
+  z-index: 1;
 }
 
-/* line 7, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 12, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .jumbo-text {
   width: 75%;
   margin: .9375rem auto 1.875rem;
@@ -10133,13 +10137,13 @@ p {
   }
 }
 
-/* line 21, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 26, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .date, .time {
   margin-bottom: 0; 
   line-height: 1.4;
 }
 
-/* line 25, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 30, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .date {
   font-size: 1.5rem;
 }
@@ -10149,7 +10153,7 @@ p {
   }
 }
 
-/* line 32, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 37, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .time {
   font-size: 1.0625rem;
 }
@@ -10159,12 +10163,12 @@ p {
   }
 }
 
-/* line 41, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 46, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 {
   margin-top: 1.875rem;
   margin-bottom: 1.5625rem;
 }
-/* line 44, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 49, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 span {
   position: relative; 
   padding-right: .625rem;
@@ -10173,7 +10177,7 @@ p {
   color: #fafafa;
   text-transform: lowercase;
 }
-/* line 52, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 57, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 span:before, .h1 span:after {
   position: absolute;
   bottom: 45%;
@@ -10183,15 +10187,15 @@ p {
   content: "";
   background-color: #fafafa;
 }
-/* line 61, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 66, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 span:before {
   right: 100%;
 }
-/* line 64, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 69, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 span:after {
   left: 100%;
 }
-/* line 68, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 73, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .h1 img {
   display: block;
   margin: .46875rem auto .9375rem;
@@ -10201,17 +10205,17 @@ p {
     margin-top: 3.75rem;
     margin-bottom: 3.125rem;
   }
-  /* line 76, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+  /* line 81, /Users/zapo/Desktop/archer-party/src/style/theme/header */
   .h1 img {
     margin: .9375rem auto 1.875rem;
   }
 }
 
-/* line 83, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 88, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .rsvp-btn {
   margin-bottom: 1.875rem;
 }
-/* line 85, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+/* line 90, /Users/zapo/Desktop/archer-party/src/style/theme/header */
 .rsvp-btn img {
   margin-left: .5rem;
 }
@@ -10227,46 +10231,71 @@ p {
   }
 }
 
+/* line 105, /Users/zapo/Desktop/archer-party/src/style/theme/header */
+.space-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  background: url(polina.jpg) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; 
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+       -o-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
 /* line 1, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form-div {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem; 
+  overflow: hidden;
   color: #fafafa;
-  text-align: center; 
+  text-align: center;
   background-color: #bc452c;
 }
-/* line 6, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+/* line 8, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form-div .title {
   font-size: 1.75rem; 
   color: #fafafa;
 }
-/* line 9, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+/* line 11, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form-div .title + * {
   font-size: .9375rem;
   font-weight: 300;
 }
 @media only screen and (min-width: 768px) {
-  /* line 16, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+  .rsvp-form-div {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  /* line 20, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
   .rsvp-form-div .title {
     font-size: 2.375rem;
   }
-  /* line 18, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+  /* line 22, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
   .rsvp-form-div .title + * {
     font-size: 1.5625rem;
   }
 }
 
-/* line 25, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+/* line 29, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form {
   max-width: 22.5rem;
   margin: 1.875rem auto;
 }
-/* line 28, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+/* line 32, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form input {
   height: auto;
   padding: .9375rem; 
   font-size: 1.25rem;
   text-align: center;
 }
-/* line 34, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
+/* line 38, /Users/zapo/Desktop/archer-party/src/style/theme/rsvp-section */
 .rsvp-form + .btn {
   margin-bottom: 1.875rem;
 }
@@ -10300,8 +10329,9 @@ p {
 /* line 16, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .choose-your-ride {
   text-align: center;
+  background-color: #fafafa;
 }
-/* line 18, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 19, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .choose-your-ride .title {
   font-size: 1.5rem;
   color: #bc452c;
@@ -10312,23 +10342,50 @@ p {
   }
 }
 
-/* line 26, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 27, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .choose-your-ride-list {
   margin-top: 3.75rem;
   margin-bottom: 3.75rem;
 }
+/* line 30, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+.choose-your-ride-list li > a {
+  display: block;
+  padding: 1.875rem;
+  color: #2f2f2f;
+}
+/* line 35, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+.choose-your-ride-list li.ride-choice {
+  background-color: #bc452c;
+}
+/* line 37, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+.choose-your-ride-list li.ride-choice figcaption {
+  color: #fafafa;
+}
 
-/* line 31, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 43, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .ride {
   margin: 0;
 }
-/* line 33, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 46, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+.ride:hover img {
+  -webkit-transform: translateY(-1.25rem);
+      -ms-transform: translateY(-1.25rem);
+       -o-transform: translateY(-1.25rem);
+          transform: translateY(-1.25rem);
+}
+/* line 50, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+.ride img {
+  -webkit-transition: -webkit-transform .3s ease;
+       -o-transition:      -o-transform .3s ease;
+          transition:         transform .3s ease;
+}
+/* line 53, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .ride figcaption {
   margin-top: 1.640625rem;
   margin-bottom: 1.40625rem;
 }
 
-/* line 39, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 59, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .ride-actions a {
   display: inline-block;
   padding: .25rem 1rem;
@@ -10337,7 +10394,7 @@ p {
   background-color: #bc452c;
   border-radius: 1rem;
 }
-/* line 46, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
+/* line 66, /Users/zapo/Desktop/archer-party/src/style/theme/choose-your-ride */
 .ride-actions a + a {
   margin-left: .75rem;
 }
@@ -10372,40 +10429,45 @@ p {
 }
 @media only screen and (min-width: 768px) {
   .thank-you-text, .the-strathallan {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .thank-you-text, .the-strathallan {
     font-size: 5.625rem;
   }
 }
 
-/* line 26, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 29, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .thank-you-text {
   color: #fafafa;
 }
 
-/* line 30, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 33, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .the-strathallan {
   margin-bottom: 0; 
   color: #d7afc5;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 40, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+  /* line 43, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
   .confirmation-extras .columns:first-child {
     border-right: 1px solid #4b3742;
   }
 }
 
-/* line 45, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 48, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .see-you-there {
   font-size: 2.375rem;
   font-weight: 300;
 }
 
-/* line 49, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 52, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .get-directions-btn {
   font-size: 1.5rem;
 }
 
-/* line 53, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 56, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .date-time-reminder {
   margin-top: 3.125rem; 
   font-size: 1.5625rem;
@@ -10417,7 +10479,7 @@ p {
   }
 }
 
-/* line 61, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 64, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .add-to-calendar {
   font-size: 1.5625rem;
   color: #d7afc5;
@@ -10431,11 +10493,11 @@ p {
 .add-to-calendar:after {
   clear: both;
 }
-/* line 66, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 69, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .add-to-calendar:hover, .add-to-calendar:focus {
   color: inherit;
 }
-/* line 69, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
+/* line 72, /Users/zapo/Desktop/archer-party/src/style/theme/confirmation-footer */
 .add-to-calendar img {
   position: relative;
   top: .625rem;
@@ -10449,20 +10511,11 @@ p {
 }
 
 /* line 22, /Users/zapo/Desktop/archer-party/src/style/style.scss */
-.copyright {
-  margin-bottom: 0;
-  font-size: .75rem;
-  color: #fafafa; 
-  text-align: center;
-  background-color: #bc452c;
-}
-
-/* line 30, /Users/zapo/Desktop/archer-party/src/style/style.scss */
 .title {
   font-weight: 300;
 }
 
-/* line 34, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+/* line 26, /Users/zapo/Desktop/archer-party/src/style/style.scss */
 .btn {
   display: inline-block;
   padding: .3125rem 2.5rem .625rem;
@@ -10472,7 +10525,48 @@ p {
   border: 1px solid #fafafa;
   border-radius: 2rem;
 }
-/* line 43, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+/* line 35, /Users/zapo/Desktop/archer-party/src/style/style.scss */
 .btn:hover, .btn:focus {
   color: inherit;
+}
+
+/* line 40, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+body {
+  background-color: #2f2f2f;
+}
+
+/* line 44, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.container {
+  position: relative;
+  z-index: 5; 
+  overflow: hidden;
+}
+
+/* line 50, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.footer {
+  background-color: #bc452c;
+}
+
+/* line 54, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.copyright {
+  margin-bottom: 0;
+  font-size: .75rem;
+  color: #fafafa; 
+  text-align: center;
+}
+
+/* line 63, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.screen {
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 69, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.main {
+  position: relative;
+}
+
+/* line 73, /Users/zapo/Desktop/archer-party/src/style/style.scss */
+.choose-your-ride-div, .confirmation {
+  overflow: hidden;
 }

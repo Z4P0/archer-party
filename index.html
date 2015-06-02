@@ -11,32 +11,37 @@
     <script src="js/vendor/modernizr.min.js"></script>
   </head>
   <body id="index"><a href="#main" class="visuallyhidden">Skip to main content</a>
+    <video id="space-video" autoplay loop class="space-video">
+      <source src="misc/space-loop.mp4" type="video/mp4">
+    </video>
     <div class="container">
-      <header class="header page-section">
+      <header class="header page-section one">
         <div class="row">
           <div class="columns">
-            <p class="jumbo-text">The sky is not the limit</p>
-            <p class="date">June 17th, 2015</p>
-            <p class="time">5:00 pm - 8:00pm</p>
-            <h1 class="h1"><span>Celebrate with</span><img src="images/archer-logo.png" alt="" title="Archer Communications" width="206" height="54"></h1><a href="#rsvp-form" class="rsvp-btn btn">RSVP <img src="images/arrow-down.png" alt=""/></a>
+            <p id="intro-text" class="jumbo-text">The sky is not the limit</p>
+            <div id="details">
+              <p class="date intro-text">June 17th, 2015</p>
+              <p class="time intro-text">5:00 pm - 8:00pm</p>
+              <h1 class="h1 intro-text"><span>Celebrate with</span><img src="images/archer-logo.png" alt="" title="Archer Communications" width="206" height="54"></h1><a id="rsvp-btn" href="#rsvp-form" class="intro-text rsvp-btn btn">RSVP</a>
+            </div>
           </div>
         </div>
       </header>
-      <main id="main">
-        <div id="rsvp-form" class="rsvp-form-div page-section">
+      <main id="main" class="main">
+        <div id="rsvp-form" class="rsvp-form-div">
           <div class="row">
             <div class="columns">
               <h2 class="title">Join us as we celebrate reaching new heights!</h2>
               <p>Please Enter:</p>
               <div class="rsvp-form">
-                <input type="text" placeholder="Full Name" name="full_name">
-                <input type="text" placeholder="Company">
-                <input type="email" placeholder="E-Mail">
-              </div><a href="#choose-your-ride" class="btn">Next</a>
+                <input id="name" type="text" placeholder="Full Name" name="full_name">
+                <input id="company" type="text" placeholder="Company" name="company">
+                <input id="email" type="email" placeholder="E-Mail" name="email">
+              </div><a id="choose-your-ride-btn" href="#choose-your-ride" class="btn">Next</a>
             </div>
           </div>
         </div>
-        <div id="choose-your-ride">
+        <div id="choose-your-ride" class="choose-your-ride-div">
           <div class="how-will-you-get-there">
             <div class="row page-section">
               <div class="columns">
@@ -49,28 +54,41 @@
               <div class="columns">
                 <h3 class="title">Choose Your Ride</h3>
                 <ul class="choose-your-ride-list small-block-grid-1 medium-block-grid-3">
-                  <li>
-                    <div>
+                  <li><a href="#" data-reveal-id="mary-poppins-modal">
                       <figure class="ride"><img src="images/mary-poppins.png" alt="Umbrella">
                         <figcaption>Mary Poppin's Umbrella</figcaption>
-                      </figure>
-                      <div class="ride-actions"><a href="#">More Info</a><a href="#">This is my ride</a></div>
+                      </figure></a>
+                    <div id="mary-poppins-modal" data-reveal aria-hidden="true" role="dialog" class="reveal-modal">
+                      <h2>Mary Poppin's Umbrella.</h2>
+                      <p class="lead">Your couch.  It is mine.</p>
+                      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+                      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                      <div class="ride-actions"><a id="choose-mary-poppins" data-ride="umbrella">This is my ride</a>
+                      </div>
                     </div>
                   </li>
-                  <li>
-                    <div>
+                  <li><a href="#" data-reveal-id="millenium-falcon-modal">
                       <figure class="ride"><img src="images/millenium-falcon.png" alt="alt">
                         <figcaption>The Millenium Falcon</figcaption>
-                      </figure>
-                      <div class="ride-actions"><a href="#">More Info</a><a href="#">This is my ride</a></div>
+                      </figure></a>
+                    <div id="millenium-falcon-modal" data-reveal aria-hidden="true" role="dialog" class="reveal-modal">
+                      <h2>The Millenium Falcon</h2>
+                      <p class="lead">Help me Obi-Wan Kenobi, you're my only hope</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum necessitatibus ipsa voluptatum odit nostrum eligendi suscipit consequatur, eos officia at, facilis quaerat ut a temporibus perferendis, molestias ad voluptatibus. Quaerat.</p><a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                      <div class="ride-actions"><a id="choose-millenium-falcon" data-ride="millenium_falcon">This is my ride</a>
+                      </div>
                     </div>
                   </li>
-                  <li>
-                    <div>
+                  <li><a href="#" data-reveal-id="elevator-modal">
                       <figure class="ride"><img src="images/elevator.png" alt="alt">
                         <figcaption>An Elevator</figcaption>
-                      </figure>
-                      <div class="ride-actions"><a href="#">More Info</a><a href="#">This is my ride</a></div>
+                      </figure></a>
+                    <div id="elevator-modal" data-reveal aria-hidden="true" role="dialog" class="reveal-modal">
+                      <h2>Anywhere but the 13th floor</h2>
+                      <p class="lead">Is this Willy Wonka's elevator?</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam reiciendis fuga animi laudantium qui. Fugit velit, dolores obcaecati dolore, id, sequi maiores molestiae non repellat ab qui autem eius. Dolores!</p><a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                      <div class="ride-actions"><a id="choose-elevator" data-ride="elevator">This is my ride</a>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -78,21 +96,23 @@
             </div>
           </div>
         </div>
-        <div id="confirmation" class="confirmation page-section">
-          <div class="row">
-            <div class="columns">
-              <div class="row">
-                <div class="columns medium-8">
-                  <div class="thank-you-message">
-                    <h2 id="thank-you-text" class="thank-you-text">That's no moon Luis, it's...</h2>
-                    <p class="the-strathallan">The Strathallan</p>
-                  </div>
-                  <div class="confirmation-extras row">
-                    <div class="columns medium-5">
-                      <p class="see-you-there">See you there!</p><a href="#" class="btn get-directions-btn">Get directions</a>
+        <div id="confirmation" class="confirmation four">
+          <div class="page-section">
+            <div class="row">
+              <div class="columns">
+                <div class="row">
+                  <div class="columns medium-8">
+                    <div class="thank-you-message">
+                      <h2 id="thank-you-text" class="thank-you-text"></h2>
+                      <p class="the-strathallan">The Strathallan</p>
                     </div>
-                    <div class="columns medium-7">
-                      <p class="date-time-reminder">June 17th, 2015 <br/>5:00pm - 8:00pm</p><a href="#" class="add-to-calendar">Add to calendar<img src="images/calendar-icon.png" alt="" class="left"></a>
+                    <div class="confirmation-extras row">
+                      <div class="columns medium-5">
+                        <p class="see-you-there">See you there!</p><a href="https://www.google.com/maps/dir/''/the+strathallan/data=!4m5!4m4!1m0!1m2!1m1!1s0x89d6b5a0c7ad986f:0xffe0d82ab98e43da?sa=X&amp;ei=HXNtVa7WH5CwyATe2oAQ&amp;ved=0CKUBEPUXMA4" target="_blank" class="btn get-directions-btn">Get directions</a>
+                      </div>
+                      <div class="columns medium-7">
+                        <p class="date-time-reminder">June 17th, 2015 <br/>5:00pm - 8:00pm</p><a href="#" target="_blank" class="add-to-calendar">Add to calendar<img src="images/calendar-icon.png" alt="" class="left"></a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -106,9 +126,12 @@
       </footer>
     </div>
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/pixi.min.js"></script>
     <script src="js/vendor/fastclick.min.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/vendor/SplitText.min.js"></script>
     <script src="js/vendor/TweenMax.min.js"></script>
+    <script src="js/vendor/ScrollToPlugin.min.js"></script>
     <script src="js/vendor/konami.js"></script>
     <script src="js/main.js"></script>
   </body>
