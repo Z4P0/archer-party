@@ -1,8 +1,10 @@
 .rsvp-form-div {
+    overflow: hidden;
     background-color: $red;
     color: $white;
     text-align: center;
-
+    padding-top: $column-gutter;
+    padding-bottom: $column-gutter;
     .title {
         color: $white;
         font-size: rem-calc(28);
@@ -13,6 +15,8 @@
     }
 
     @include mq(netbook) {
+        padding-top: $column-gutter*4;
+        padding-bottom: $column-gutter*4;
         .title {
             font-size: rem-calc(38);
             + * {

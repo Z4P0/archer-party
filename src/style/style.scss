@@ -19,14 +19,6 @@
     padding-bottom: $column-gutter*2;
 }
 
-.copyright {
-    text-align: center;
-    margin-bottom: 0;
-    font-size: rem-calc(12);
-    background-color: $red;
-    color: $white;
-}
-
 .title {
     font-weight: $light;
 }
@@ -43,4 +35,41 @@
     &:focus {
         color: inherit;
     }
+}
+
+body {
+    background-color: $black;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+
+.footer {
+    background-color: $red;
+}
+
+    .copyright {
+        text-align: center;
+        margin-bottom: 0;
+        font-size: rem-calc(12);
+        color: $white;
+    }
+
+
+//  ----------------------------------------
+.screen {
+    // display: none;
+    height: 0;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+}
+.choose-your-ride-div,
+.confirmation {
+    overflow: hidden;
 }

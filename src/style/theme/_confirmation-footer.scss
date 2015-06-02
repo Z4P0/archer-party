@@ -20,6 +20,9 @@
             font-size: rem-calc(50);
             line-height: 1.1;
             @include mq(netbook) {
+                font-size: rem-calc(72);
+            }
+            @include mq(desktop) {
                 font-size: rem-calc(90);
             }
         }
